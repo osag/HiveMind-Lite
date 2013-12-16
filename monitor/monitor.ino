@@ -60,9 +60,6 @@ void setup() {
   uint32_t volumesize;  
   volumesize = volume.blocksPerCluster();
   volumesize *= volume.clusterCount();
-  volumesize *= 512;
-  volumesize /= 1024;
-  volumesize /= 1024;
   Serial.println("\nFiles found on the card (name, date and size in bytes): ");
   root.openRoot(volume);
   root.ls(LS_R | LS_DATE | LS_SIZE);
